@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: todonodejs
+    app.kubernetes.io/part-of: mysql
+    name: frontend
+  name: frontend-apac
+  namespace: mysql
+spec:
+  host: todo.apps.ocp4.example.com
+  path: "/todo"
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: frontend-apac
+    weight: 100
+  wildcardPolicy: None
