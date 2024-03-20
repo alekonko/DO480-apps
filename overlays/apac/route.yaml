@@ -5,7 +5,7 @@ metadata:
     app: todonodejs
     app.kubernetes.io/part-of: mysql
     name: frontend
-  name: frontend-apac
+  name: frontend
   namespace: mysql
 spec:
   host: todo.apps.ocp4.example.com
