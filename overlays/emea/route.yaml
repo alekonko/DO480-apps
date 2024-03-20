@@ -5,7 +5,7 @@ metadata:
     app: todonodejs
     app.kubernetes.io/part-of: mysql
     name: frontend
-  name: frontend-apac
+  name: frontend-emea
   namespace: mysql
 spec:
   host: todo.apps.ocp4-mng.example.com
@@ -14,6 +14,6 @@ spec:
     targetPort: 8080
   to:
     kind: Service
-    name: frontend-apac
+    name: frontend-emea
     weight: 100
   wildcardPolicy: None
